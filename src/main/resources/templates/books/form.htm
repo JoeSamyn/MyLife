@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books | Home</title>
+</head>
+<body>
+    <div>
+        <h1>Add new Book</h1>
+    </div>
+    <div>
+        <form enctype="multipart/form-data" th:object="${book}" th:action="@{${action}}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <div>
+                <span class="placeholder" data-placeholder="Choose an image...">Choose an image...</span><br>
+                <input type="file" id="file" name="file"/>
+                <label for="file" class="button"></label>
+            </div>
+            <div>
+                <input type="text" id="title" placeholder="Book Title" th:field="*{title}"><br>
+                <input type="text" id="genre" placeholder="genre" th:field="*{genre}"><br>
+                <input type="text" id="price" placeholder="Price" th:field="*{price}">
+                <label>Wish List</label>
+                <input type="checkbox" id="wishlist"><br>
+            </div>
+            <div>
+                <button type="submit" th:text="submit"></button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

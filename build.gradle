@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.joesamyn'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.1.3.RELEASE'
+    compile'javax.servlet:javax.servlet-api:4.0.1'
+    compile 'org.springframework:spring-webmvc:5.1.5.RELEASE'
+    compile 'org.hibernate:hibernate-core:5.4.1.Final'
+    compile 'org.springframework:spring-orm:5.1.5.RELEASE'
+    compile 'com.h2database:h2:1.4.198'
+    compile 'org.apache.tomcat:tomcat-dbcp:9.0.16'
+    compile 'org.springframework.boot:spring-boot-starter-web:2.1.3.RELEASE'
+}

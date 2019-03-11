@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Details</title>
+</head>
+<body>
+    <div>
+        <h2 th:text="${book.title}">Book Details!</h2>
+    </div>
+    <div>
+        <h4 th:text="${book.genre}"></h4>
+        <img th:src="@{|/books/${book.id}.img|}" style="height: 40%; width: 40%"/>
+    </div>
+    <div>
+        <a th:href="@{|/books/${book.id}/edit|}">Edit</a>
+        <form th:action="@{|/books/${book.id}/delete|}" method="post">
+            <button type="submit" th:text="${buttonText}"></button>
+        </form>
+    </div>
+
+</body>
+</html>
